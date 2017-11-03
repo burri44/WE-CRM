@@ -10,9 +10,8 @@
  * 1. Try to understand how the router works - you may use the debugger.
  * 2. The router class should only consist of static attributes and methods.
  */
-
-$routes = [];
-$GLOBALS["ROOT_URL"] = str_replace("/index.php","",$_SERVER['PHP_SELF']);
+static $routes = [];
+$GLOBALS["ROOT_URL"] = str_replace("/index.php","",$_SERVER['PHP_SELF']); //PHP_Self gibt Adresse zurück
 if(!empty($_SERVER['REDIRECT_ORIGINAL_PATH'])) {
     $_SERVER['PATH_INFO'] = $_SERVER['REDIRECT_ORIGINAL_PATH'];
 }
